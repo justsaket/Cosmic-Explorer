@@ -1,0 +1,6 @@
+{
+  "name": "Cosmic Explorer: Beyond Earth",
+  "description": "An immersive 3D educational space exploration game where astronauts explore Earth, the Moon, and Mars with real planetary physics, verified NASA science, and voice-guided discovery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

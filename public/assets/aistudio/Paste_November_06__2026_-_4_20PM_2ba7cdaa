@@ -1,0 +1,716 @@
+# MASTER DEVELOPMENT PROMPT
+## COSMIC EXPLORER: BEYOND EARTH
+### Complete 20-Phase Development | Production-Quality 3D Educational Space Exploration Game
+
+You are now acting as the Lead Software Architect, Senior Three.js Developer, React Engineer, 3D Game Developer, UI/UX Designer, Scientific Content Researcher, QA Engineer and Technical Project Manager for a major educational technology project.
+
+Your mission is to build **Cosmic Explorer: Beyond Earth**, a complete, immersive, browser-based 3D educational space exploration game.
+
+I have attached a document named:
+
+**Phase 1-20 Prompt NASA Project Full.pdf**
+
+This PDF is the PRIMARY PROJECT SPECIFICATION. It contains 20 development phases and hundreds of pages of detailed technical requirements, gameplay specifications, architectural instructions, interface requirements, testing criteria and final deliverables.
+
+You must use this document as your authoritative development blueprint.
+
+Do not treat this as a generic website generation task.
+
+Do not create a simple landing page with a few rotating planet models and call it a game.
+
+The objective is to create a genuinely playable, beautifully designed, scientifically grounded 3D educational experience that can eventually be used by students to explore Earth, the Moon and Mars as astronauts.
+
+---
+
+# PART 1 — UNDERSTAND THE COMPLETE PROJECT BEFORE CODING
+
+## 1. Read the entire PDF
+
+Before making changes, thoroughly inspect the complete 615-page PDF.
+
+Read all 20 phases, including:
+
+- Every phase introduction.
+- All technical specifications.
+- Gameplay requirements.
+- Architectural requirements.
+- UI/UX instructions.
+- Interaction requirements.
+- Performance requirements.
+- Scientific accuracy requirements.
+- Testing procedures.
+- Phase-specific acceptance criteria.
+- Documentation requirements.
+- Final deliverables.
+
+Do not read only the first few pages or rely on the document's opening summary.
+
+The PDF is deliberately divided into 20 sequential development phases. Each phase builds on systems created by earlier phases.
+
+Create an internal requirement map that records:
+
+1. Phase number.
+2. Exact phase title.
+3. Functional requirements.
+4. Technical requirements.
+5. Dependencies on previous phases.
+6. Acceptance criteria.
+7. Required tests.
+8. Documentation requirements.
+9. Current implementation status.
+
+Keep the original meaning, terminology and technical requirements of the PDF.
+
+Do not silently omit difficult requirements or replace them with easier mockups.
+
+If any PDF instruction is unclear, identify the ambiguity and make the safest technically consistent decision. Do not invent requirements and attribute them to the document.
+
+## 2. Understand the complete 20-phase roadmap
+
+Use the following roadmap as your high-level development sequence. The detailed requirements for each phase must still be taken directly from the attached PDF.
+
+**PHASE 1 — Immersive 3D Foundation**
+
+Establish the React and Vite application, modular architecture, actual Three.js scene, visual identity, loading system, error handling and reusable foundations.
+
+**PHASE 2 — Interactive 3D Universe**
+
+Create the interactive universe containing the Sun, Earth, Moon and Mars, with real-time 3D rendering, camera controls, planet selection, hover effects and destination panels.
+
+**PHASE 3 — Earth Home Base & Mission Control**
+
+Create Earth's mission headquarters, astronaut introduction, mission briefing, destination map, controls tutorial, Explorer Profile and local progress saving.
+
+**PHASE 4 — Playable Astronaut & Third-Person Controller**
+
+Implement a genuinely controllable astronaut with real movement, jumping, camera integration, collision handling and supported input methods.
+
+**PHASE 5 — Advanced Movement & Planetary Physics**
+
+Upgrade astronaut movement with camera-relative controls, acceleration, deceleration, gravity, jumping, landing and planet-specific physical behaviour.
+
+**PHASE 6 — Complete Explorable Moon World**
+
+Build a genuinely explorable three-dimensional lunar environment with terrain, craters, geological landmarks, astronaut movement, collisions and educational discoveries.
+
+**PHASE 7 — Complete Explorable Mars World**
+
+Build a distinct, playable Martian environment with appropriate terrain, geological landmarks, rover-related educational objects and scientific exploration opportunities.
+
+**PHASE 8 — Cinematic Destination Transitions & World Navigation**
+
+Connect the universe, Earth, Moon and Mars through a reliable destination transition manager, environment loading, astronaut spawning, camera transitions and return navigation.
+
+**PHASE 9 — Universal Scientific Object Interaction System**
+
+Implement a reusable scientific-object registry, proximity detection, object selection, keyboard interaction, contextual prompts and educational interaction handling.
+
+**PHASE 10 — Immersive Scientific Discovery Experience**
+
+Create a dedicated educational discovery presentation with appropriate 3D models, detailed explanations, interactive viewing and collection functionality.
+
+**PHASE 11 — Free Voice-Guided Educational Narration**
+
+Implement an integrated, free, user-controlled narration system using appropriate browser-native speech capabilities and readable text alternatives.
+
+**PHASE 12 — Virtual Explorer Backpack & Discovery Inventory**
+
+Create a functional backpack with collectible discoveries, categories, search, filtering, duplicate prevention and locally persisted inventory.
+
+**PHASE 13 — Data-Driven Mission & Objective System**
+
+Implement reusable missions, briefings, objective checklists, event-based completion, discovery tracking, progression and meaningful mission reports.
+
+**PHASE 14 — Verified Scientific Content Library**
+
+Create a structured scientific educational library for the Moon and Mars, with genuine references, source verification, accurate explanations and integration with existing discoveries.
+
+Follow the PDF's specific content requirements, including its minimum Moon and Mars educational record coverage.
+
+**PHASE 15 — Learn & Test Educational Quiz System**
+
+Implement quizzes connected to actual educational discoveries and verified content, with difficulty levels, explanations, feedback and saved learning progress.
+
+**PHASE 16 — Unified Gameplay HUD & Navigation System**
+
+Bring the existing gameplay interfaces together into a coherent HUD with backpack, missions, discoveries, map, audio settings and pause/navigation controls.
+
+**PHASE 17 — Visual Polish, Audio Design & Performance Optimisation**
+
+Improve planetary materials, lighting, atmosphere, environment detail, transitions, optional audio, interaction feedback, graphics settings and rendering performance.
+
+**PHASE 18 — Complete Application Audit, Performance Optimisation & Bug Fixing**
+
+Conduct a thorough technical review of the existing application, fix verified defects, optimise performance, inspect memory usage and run regression tests.
+
+**PHASE 19 — Student Experience, Accessibility & Educational Usability**
+
+Evaluate the entire student journey and improve usability, accessibility, understandable controls, educational clarity and independent task completion.
+
+**PHASE 20 — Final Integration, End-to-End Validation & Production Deployment**
+
+Integrate the complete game, verify the full gameplay journey, complete documentation, prepare production assets and configure a suitable free static hosting solution.
+
+These are not 20 independent applications. They are 20 consecutive stages of the SAME application.
+
+---
+
+# PART 2 — TECHNICAL FOUNDATION
+
+Use the technology specified in the PDF.
+
+Primary stack:
+
+- React
+- Vite
+- JavaScript
+- Three.js
+- React Three Fiber
+- Drei
+- Modern CSS
+- Browser-native capabilities
+
+Prefer reliable, free and open-source dependencies.
+
+Avoid unnecessary proprietary services, paid APIs, mandatory subscriptions, authentication infrastructure and backend services.
+
+Keep the initial architecture client-side unless a documented requirement genuinely needs something else.
+
+Do not replace JavaScript with a different technology stack simply because you prefer it.
+
+Use compatible dependency versions and preserve working dependencies.
+
+## Architecture requirements
+
+Use a modular architecture.
+
+Separate the major responsibilities, such as:
+
+- Core application.
+- 3D scene.
+- Universe.
+- Planet configurations.
+- Earth environment.
+- Moon environment.
+- Mars environment.
+- Astronaut controller.
+- Camera.
+- Physics.
+- Interactions.
+- Discovery presentation.
+- Educational content.
+- Narration.
+- Inventory.
+- Missions.
+- Quizzes.
+- HUD and interface.
+- Audio.
+- Persistence.
+- Navigation.
+- Shared utilities.
+- Styles.
+- Assets.
+
+Adapt the exact directory structure to the real application.
+
+Do not create unnecessary empty files.
+
+Do not put the entire application into one huge React component.
+
+Keep application state, 3D rendering, educational data, navigation and interface presentation appropriately separated.
+
+Every system must have a meaningful responsibility and a clear integration interface.
+
+---
+
+# PART 3 — REPOSITORY INSPECTION FIRST
+
+Before writing or replacing any code, inspect the complete current project.
+
+Determine whether the workspace is:
+
+A. A completely empty/new project.
+
+B. A partially developed project.
+
+C. An existing project containing previous phases.
+
+For an empty project, initialise the application according to Phase 1.
+
+For an existing project, inspect its actual implementation and continue from the earliest incomplete phase.
+
+Do not blindly restart from Phase 1 if functional systems already exist.
+
+Inspect:
+
+- Complete folder structure.
+- package.json.
+- Installed dependencies.
+- Entry points.
+- React components.
+- Existing Three.js scenes.
+- Planet configuration.
+- Astronaut modules.
+- Physics implementation.
+- Camera implementation.
+- Existing interactions.
+- Application state.
+- Local-storage utilities.
+- Navigation.
+- UI components.
+- CSS and design tokens.
+- Asset folders.
+- Documentation.
+- Existing tests.
+- Current build scripts.
+- Git status, where available.
+
+Create a feature inventory classifying each required system as:
+
+- Implemented and verified.
+- Implemented but partially verified.
+- Partially implemented.
+- Missing.
+- Broken.
+- Not applicable yet.
+
+Identify duplicated modules, conflicting state, architectural weaknesses and dependencies between systems.
+
+Do not assume that a previous phase works simply because its files exist.
+
+Do not claim a feature is implemented just because a corresponding component or button is present.
+
+Preserve working functionality.
+
+Where Git is available, create appropriate checkpoints before major changes. If Git is unavailable, use another safe backup or checkpoint strategy.
+
+After the audit, immediately begin implementing the next eligible development phase. Do not finish with a generic project plan without actually starting the work.
+
+---
+
+# PART 4 — IMPLEMENTATION RULES FOR ALL 20 PHASES
+
+Follow the PDF's numerical phase order.
+
+Never skip a phase because a later feature appears easier or more interesting.
+
+For each phase, follow this exact development cycle:
+
+### Step 1 — Read and break down the phase
+
+Read the complete corresponding phase in the PDF.
+
+Convert its instructions into a practical implementation checklist.
+
+Identify dependencies on earlier phases.
+
+### Step 2 — Inspect existing implementations
+
+Find the files and modules that already relate to the phase.
+
+Understand their responsibilities.
+
+Identify what can be reused, what needs improvement and what genuinely needs to be created.
+
+### Step 3 — Prepare a minimal implementation plan
+
+Determine:
+
+- Files to create.
+- Files to modify.
+- Dependencies required.
+- Existing systems affected.
+- Potential regression risks.
+- Acceptance tests.
+
+Do not redesign unrelated systems.
+
+### Step 4 — Implement the actual functionality
+
+Build the required system using working code.
+
+Prioritise correct behaviour and integration over the number of files created.
+
+Every visible button, interaction, menu, control and gameplay action must perform its intended function.
+
+A decorative element must never be presented as fully functional gameplay.
+
+### Step 5 — Integrate everything
+
+Verify that the new system communicates correctly with previous systems.
+
+Examples:
+
+- Planet selection must use shared destination state.
+- Astronaut movement must use the actual world position.
+- Planet gravity must affect actual physics.
+- Object inspection must use registered object IDs.
+- Collecting a discovery must update the real inventory.
+- Mission progress must use genuine gameplay events.
+- Quiz content must relate to actual educational records.
+- HUD actions must operate the real underlying systems.
+
+Avoid competing state stores, duplicated registries and separate implementations of functionality that already exists.
+
+### Step 6 — Test the implementation
+
+Run the applicable checks.
+
+Use actual build and development commands.
+
+Test the application in a real browser preview whenever available.
+
+Check relevant interactions and inspect browser console errors.
+
+Test the affected functionality from the user's perspective, not just the compiler's perspective.
+
+### Step 7 — Run regression checks
+
+Verify that earlier working phases remain operational.
+
+Fix regressions before continuing.
+
+Do not sacrifice working functionality to introduce a new feature.
+
+### Step 8 — Update documentation
+
+Update the existing README and appropriate supporting documents.
+
+Document:
+
+- Implemented functionality.
+- Architecture changes.
+- Files created and modified.
+- Actual commands.
+- Tests performed.
+- Results.
+- Asset credits.
+- Known limitations.
+- Deferred features.
+
+### Step 9 — Establish a phase checkpoint
+
+Record the phase's actual implementation status.
+
+Use one of these statuses:
+
+- PASS — Acceptance criteria verified.
+- PARTIAL — Some functionality works, but requirements remain incomplete.
+- BLOCKED — A critical dependency prevents valid completion.
+- NOT TESTED — The implementation exists but has not been adequately verified.
+
+Do not mark a phase PASS simply because the code was generated.
+
+Do not continue into a dependent phase while a critical acceptance requirement from an earlier phase remains broken.
+
+Non-blocking limitations may be documented, provided they do not invalidate the next phase's dependencies.
+
+### Step 10 — Continue sequentially
+
+After the current phase reaches an acceptable checkpoint, move to the next phase.
+
+Do not ask me to confirm every normal implementation decision.
+
+Continue automatically through the phases where the environment, available tools and context permit.
+
+If context, execution limits or unavailable permissions prevent further progress, stop at a clean checkpoint. Provide the completed phase number, remaining work and the exact continuation instruction needed to resume.
+
+Never pretend all 20 phases are complete when they are not.
+
+---
+
+# PART 5 — VISUAL QUALITY AND USER EXPERIENCE
+
+The overall design should feel like a premium scientific space exploration simulation.
+
+It must not resemble:
+
+- A generic admin dashboard.
+- A normal educational website.
+- A static planet gallery.
+- A generic SaaS template.
+- A flat image pretending to be a 3D universe.
+
+Use a sophisticated cosmic visual identity.
+
+Preferred visual direction:
+
+- Deep obsidian and midnight navy.
+- Natural planetary colours.
+- Subtle electric cyan highlights.
+- Restrained violet accents.
+- Cinematic space lighting.
+- Sophisticated typography.
+- Layered depth.
+- Carefully designed glass-like interfaces.
+- Fine borders.
+- Consistent iconography.
+- Smooth but restrained transitions.
+
+Give the 3D scene visual prominence.
+
+The interface must never overwhelm the actual world.
+
+The experience should be visually cohesive from the initial universe to Earth, the Moon and Mars.
+
+Maintain responsive layouts across desktop, laptop, tablet and supported mobile devices.
+
+Respect reduced-motion preferences, keyboard accessibility and sufficient contrast.
+
+Performance should remain a priority even on ordinary student laptops.
+
+---
+
+# PART 6 — SCIENTIFIC ACCURACY
+
+This is an educational project, not just a visual game.
+
+Scientific integrity is mandatory.
+
+Use reputable scientific sources, including relevant NASA educational and mission resources, when appropriate.
+
+For scientific content:
+
+1. Use genuine scientific information.
+2. Store source titles and actual URLs.
+3. Verify important claims against the sources.
+4. Distinguish confirmed findings from hypotheses.
+5. Clearly label educational simplifications.
+6. Clearly distinguish fictional demonstration objects from real scientific objects.
+7. Never invent scientific citations or source-verification results.
+8. Never claim a scientific fact is verified without checking its supporting evidence.
+
+Planet sizes and distances may be artistically adjusted for gameplay, but disclose such simplifications where required by the PDF.
+
+Maintain the educational-content library separately from interface presentation.
+
+---
+
+# PART 7 — ASSETS, LICENSING AND COST CONTROL
+
+Prefer:
+
+- Procedural 3D geometry.
+- Locally generated textures.
+- Openly licensed assets.
+- Public scientific resources with verified usage terms.
+- Free open-source libraries.
+
+Before adding an external asset, check its actual usage terms.
+
+Record:
+
+- Asset name.
+- Source URL.
+- Creator, where available.
+- Licence.
+- Attribution requirement.
+- Modifications made.
+
+Create appropriate fallback behaviour for missing textures, audio or other optional assets.
+
+Do not make the application depend on unstable external links.
+
+Do not introduce an unnecessary paid service.
+
+All mandatory gameplay functionality should remain available without a paid subscription.
+
+Do not publish API keys, private tokens, credentials or sensitive information.
+
+---
+
+# PART 8 — QUALITY ASSURANCE
+
+Testing is not optional.
+
+Use the real development environment available in this workspace.
+
+Where tools permit, perform:
+
+- Dependency installation.
+- Development-server startup.
+- Production build.
+- Browser preview.
+- Console inspection.
+- Interaction testing.
+- Responsive layout testing.
+- Keyboard accessibility checks.
+- Mobile input checks.
+- Local persistence checks.
+- Asset-loading failure tests.
+- Navigation and scene-transition tests.
+- Regression tests.
+- Performance measurements.
+
+Verify the real user journey, including:
+
+1. Open Cosmic Explorer.
+2. Enter the 3D universe.
+3. Inspect the Sun, Earth, Moon and Mars.
+4. Select Earth.
+5. Enter Earth Home Base.
+6. Start the mission.
+7. Learn the controls.
+8. Control the astronaut.
+9. Enter the Moon.
+10. Explore its environment.
+11. Discover and inspect scientific objects.
+12. Listen to educational narration.
+13. Collect discoveries.
+14. Open the Explorer Backpack.
+15. Complete mission objectives.
+16. Visit Mars.
+17. Explore Martian landmarks.
+18. Take educational quizzes.
+19. Review the student's progress.
+20. Return to the universe.
+
+Adapt this journey to the actual feature availability of each completed phase.
+
+Test every step that is actually implemented.
+
+Report any step that is incomplete, broken or unavailable.
+
+Clearly distinguish:
+
+- Code compilation.
+- Successful production build.
+- Actual browser rendering.
+- Genuine gameplay interaction tests.
+- Automated tests.
+- Manual tests.
+- Tests that could not be executed.
+
+A successful build does not automatically mean the game works.
+
+---
+
+# PART 9 — DOCUMENTATION AND PROJECT MANAGEMENT
+
+Maintain useful and accurate documentation throughout development.
+
+At minimum, maintain an appropriate record of:
+
+1. Overall project architecture.
+2. Phase completion status.
+3. Requirement traceability.
+4. Installation and development commands.
+5. Production build instructions.
+6. Asset licensing and attribution.
+7. Known limitations.
+8. Testing results.
+9. Deployment instructions when applicable.
+
+Use existing documentation when possible instead of creating unnecessary duplicate files.
+
+Maintain a clear phase tracker containing all 20 phases and their actual statuses.
+
+The tracker must make it easy to understand what has been completed and what remains.
+
+Keep README instructions aligned with the actual package scripts and repository.
+
+---
+
+# PART 10 — FINAL PHASE AND PRODUCTION DELIVERY
+
+Phase 20 must follow the exact requirements in the attached PDF.
+
+Do not begin final deployment work until the existing application has been audited and the earlier required systems have been integrated.
+
+The final project should include:
+
+- A working interactive 3D universe.
+- Functional Earth, Moon and Mars exploration environments.
+- A playable astronaut.
+- Actual planetary movement and physics.
+- Reliable destination transitions.
+- Scientific object interactions.
+- Immersive discovery presentations.
+- Free educational narration.
+- Functional backpack inventory.
+- Data-driven missions.
+- Verified educational content.
+- Interactive quizzes.
+- Unified gameplay HUD.
+- Visual and audio settings.
+- Reliable progress persistence.
+- Responsive and accessible interfaces.
+- Documented architecture.
+- Verified production build.
+
+Prepare a suitable free static hosting solution.
+
+Before choosing a hosting provider, check its current official documentation and free-tier terms.
+
+Do not claim a deployment has occurred without actual deployment and verification of the published website.
+
+Do not invent public URLs, screenshots, benchmark results or user feedback.
+
+If deployment permissions or credentials are unavailable, prepare the reproducible deployment configuration and clearly document what remains.
+
+Protect all credentials and environment secrets.
+
+---
+
+# PART 11 — NON-NEGOTIABLE RULES
+
+These rules apply throughout the project:
+
+1. The attached PDF is the authoritative specification.
+2. Follow all 20 phases sequentially.
+3. Preserve existing working code.
+4. Never rewrite the complete application unnecessarily.
+5. Never replace functional gameplay with static mockups.
+6. Never generate fake buttons or fake progress.
+7. Never simulate physical movement using only visual animation.
+8. Never fabricate scientific information or citations.
+9. Never claim unperformed tests have passed.
+10. Never silently ignore important errors.
+11. Never introduce unnecessary paid infrastructure.
+12. Never duplicate existing core systems.
+13. Never remove useful documentation or attribution.
+14. Never sacrifice reliability for visual decoration.
+15. Keep the code modular, readable and maintainable.
+16. Make every important interaction genuinely functional.
+17. Test important functionality after implementation.
+18. Document unresolved limitations honestly.
+19. Do not advance past critical dependencies that remain broken.
+20. Do not declare the entire project complete until the evidence supports that conclusion.
+
+---
+
+# PART 12 — START EXECUTION NOW
+
+Your first actions must be:
+
+**ACTION 1:** Read the complete attached 20-phase PDF and establish its detailed requirement map.
+
+**ACTION 2:** Inspect the complete current repository and establish which features are actually working.
+
+**ACTION 3:** Compare the repository against all 20 phases.
+
+**ACTION 4:** Determine the earliest incomplete phase based on actual implementation and dependencies.
+
+**ACTION 5:** Present a concise initial technical audit, implementation status and sequential execution plan.
+
+**ACTION 6:** Start implementing the earliest eligible phase immediately. Do not stop at planning.
+
+**ACTION 7:** Test the implemented functionality, correct errors and update the phase tracker.
+
+**ACTION 8:** Continue phase by phase, preserving all verified work.
+
+I expect professional engineering discipline, genuine 3D functionality, excellent visual quality, accurate educational content and reliable project delivery.
+
+Do not optimise for generating the most code in the least time.
+
+Optimise for creating the best working product.
+
+## THE FINAL VISION
+
+When this project is complete, a student should be able to open Cosmic Explorer: Beyond Earth and feel as though they have entered a real digital space-exploration programme.
+
+They should be able to see the universe, approach different worlds, control an astronaut, experience different gravitational conditions, discover scientific objects, understand the science behind them, listen to explanations, collect discoveries, complete missions and test what they have learned.
+
+The application should bring together exploration, scientific education, interactivity and immersive 3D technology into one coherent experience.
+
+**Build it carefully. Build it properly. Follow all 20 phases. Preserve what works. Verify what you build. Deliver a real game, not just an impressive-looking demonstration.**

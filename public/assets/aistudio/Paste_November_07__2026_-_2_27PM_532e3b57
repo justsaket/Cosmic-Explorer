@@ -1,0 +1,1361 @@
+# MASTER DEVELOPMENT PROMPT — REALISTIC MOON & MARS EXPLORATION SIMULATOR
+
+## YOUR ROLE
+
+Act as a world-class AAA game director, senior game developer, NASA/JPL-inspired planetary simulation designer, 3D environment artist, character animation specialist, cinematic sound designer, educational experience architect, and expert UI/UX engineer.
+
+You have decades of experience building immersive games, realistic environments, interactive simulations, advanced character controllers, and educational experiences.
+
+Your responsibility is to transform my EXISTING project into an exceptionally realistic, polished, innovative, and educational planetary exploration simulator.
+
+This is not a request to create an ordinary space game.
+
+This project is intended to educate the next generation about the Moon, Mars, planetary science, exploration, geology, extraterrestrial environments, future human settlements, scientific discoveries, and the many unanswered questions about our neighbouring worlds.
+
+The user should feel that they are physically present on another world.
+
+The experience must combine:
+
+- AAA-quality immersion.
+- Scientifically grounded environments.
+- Realistic astronaut movement.
+- Natural character animations.
+- Cinematic planetary landings.
+- Interactive exploration.
+- Educational storytelling.
+- Intuitive controls.
+- Excellent sound design.
+- Modern and exceptionally polished UI/UX.
+
+**MOST IMPORTANT: Do not just suggest improvements. Inspect the complete existing project, identify problems, and actually implement the improvements in the code.**
+
+---
+
+# PART 1 — FIRST, DEEPLY AUDIT THE EXISTING PROJECT
+
+Before making modifications, inspect the entire existing application.
+
+Understand the actual project architecture, its rendering engine, components, assets, scene management, animation systems, physics, camera, audio, controls, UI, state management, and existing functionality.
+
+Do not assume that something is broken without investigating it.
+
+Perform a thorough audit of:
+
+1. Existing Moon environment.
+2. Existing Mars environment.
+3. Planetary landing experience.
+4. Astronaut character model.
+5. Character movement and animations.
+6. Existing analog controller.
+7. Camera positioning and follow behaviour.
+8. Terrain collision and movement physics.
+9. Existing interaction systems.
+10. Sound effects and voice narration.
+11. Existing UI and menus.
+12. Mobile and desktop responsiveness.
+13. Rendering and performance.
+14. Loading behaviour and asset management.
+15. Existing errors and warnings.
+
+Identify the root causes of existing problems instead of applying temporary visual fixes.
+
+Preserve the current working architecture, working analog controls, existing features, useful assets, and existing project identity.
+
+Do not unnecessarily rebuild everything from scratch.
+
+Do not remove functioning features just to introduce new features.
+
+If an existing implementation is inefficient, improve it without compromising the working experience.
+
+After auditing, immediately begin implementing improvements.
+
+Do not stop at an analysis report or a list of suggestions.
+
+---
+
+# PART 2 — THE CORE VISION
+
+Build a realistic educational space exploration experience where the user becomes an astronaut exploring the Moon and Mars.
+
+The objective is to teach people things that humanity has discovered, things that scientists are currently investigating, and things future generations may still need to discover.
+
+The application must teach through experience rather than simply displaying paragraphs of information.
+
+The user should be able to:
+
+- Land on the Moon.
+- Walk across the lunar surface.
+- Explore craters.
+- Examine rocks and minerals.
+- Understand lunar soil.
+- Discover scientifically interesting locations.
+- Operate exploration vehicles.
+- Investigate permanently shadowed regions.
+- Learn about lunar water ice.
+- Understand how astronauts might live there.
+- Explore Mars.
+- Discover ancient river channels.
+- Investigate geological formations.
+- Study the Martian atmosphere.
+- Learn about Mars soil and rocks.
+- Examine evidence of ancient water.
+- Understand the search for possible past microbial life.
+- Explore possible future human habitats.
+- Understand how scientific instruments work.
+- Discover what remains unknown.
+
+The experience should encourage curiosity.
+
+Never make the user feel that they are studying a boring textbook.
+
+Every discovery should feel like a genuine exploration achievement.
+
+## Learning philosophy
+
+Use a simple principle:
+
+OBSERVE → EXPLORE → INTERACT → DISCOVER → UNDERSTAND.
+
+A student should learn naturally while walking, scanning, collecting samples, operating equipment, and completing missions.
+
+Make complex scientific concepts easy to understand without sacrificing scientific accuracy.
+
+Whenever information is uncertain, clearly distinguish:
+
+- Scientifically confirmed knowledge.
+- Current scientific interpretations.
+- Active research questions.
+- Theoretical possibilities.
+- Fictional simulation scenarios.
+
+Never present fictional discoveries as established scientific facts.
+
+---
+
+# PART 3 — THE LANDING EXPERIENCE MUST FEEL CINEMATIC AND REAL
+
+This is one of the most important features.
+
+When the user chooses the Moon or Mars, create a proper cinematic arrival experience.
+
+Do not immediately teleport the astronaut onto the surface.
+
+Create a smooth, immersive landing sequence.
+
+## Moon landing sequence
+
+1. Display a cinematic view of the Moon.
+2. Show the spacecraft approaching the lunar surface.
+3. Gradually reveal the surface details.
+4. Show the landing area becoming visible.
+5. Introduce subtle spacecraft movement and appropriate landing effects.
+6. Transition the camera naturally from the spacecraft view to the astronaut.
+7. Simulate engine effects and surface dust where appropriate.
+8. Show the actual landing and touchdown.
+9. Let the environment settle naturally.
+10. Slowly introduce the astronaut's first-person or third-person perspective.
+11. Begin the welcome narration only after successful touchdown.
+
+Make the transition cinematic but not excessively long.
+
+The user should feel that they have genuinely arrived on another celestial body.
+
+## Mars landing sequence
+
+Create a distinctly different arrival experience for Mars.
+
+Show the Martian atmosphere, reddish landscape, distant geological formations, and the gradual approach to the landing zone.
+
+Use scientifically appropriate atmospheric effects.
+
+Do not simply reuse the Moon landing sequence with a red colour filter.
+
+Mars and the Moon must feel like two genuinely different worlds.
+
+## Landing welcome voice system
+
+Implement a location-based welcome voice event.
+
+When the astronaut successfully lands on the Moon, play:
+
+"Welcome to the Moon. This ancient world holds the history of our Solar System in its craters, rocks, and silent landscapes. Your exploration begins here."
+
+When the astronaut successfully lands on Mars, play:
+
+"Welcome to Mars. Beneath this red and dusty landscape lie clues to an ancient world shaped by water, volcanoes, and remarkable geological change. Your exploration begins here."
+
+These are examples. Improve their delivery, pacing, and naturalness while maintaining their meaning.
+
+The voice should sound like a professional mission narrator communicating with an astronaut.
+
+### Voice requirements
+
+- English voice narration ONLY.
+- Completely remove Hindi narration.
+- Do not mix Hindi and English.
+- Do not speak bilingual sentences.
+- Do not play two voice tracks simultaneously.
+- Use a natural, calm, cinematic, professional voice.
+- Give the narration a subtle mission-control communication character.
+- Keep the narration informative and reasonably short.
+- Avoid robotic-sounding speech.
+- Do not make every object trigger a long speech.
+- Use natural pauses and appropriate pacing.
+- Add synchronized English captions.
+- Give the user the option to mute narration.
+- Add separate voice, effects, and background volume controls.
+- Ensure narration is triggered only once per successful landing.
+- Prevent duplicate playback during rerenders or scene transitions.
+- Allow the user to skip cinematic sequences.
+
+The audio should describe the environment and explain why it matters.
+
+It should not sound like someone is reading a textbook.
+
+IMPORTANT: The welcome narration must trigger from a genuine landing-completed event, not simply from opening the Moon or Mars screen.
+
+---
+
+# PART 4 — TWO WORLDS MUST LOOK AND FEEL DIFFERENT
+
+The Moon and Mars must have individual visual identities, physics, soundscapes, geological details, and interactive experiences.
+
+## A. THE MOON — ENVIRONMENT REALISM
+
+Create an authentic lunar environment.
+
+Visual characteristics:
+
+- Deep black space sky.
+- Harsh sunlight.
+- Strong, sharp shadows.
+- Realistic grey lunar regolith.
+- Natural craters of different sizes.
+- Rocks and scattered boulders.
+- Uneven terrain.
+- Distant crater formations.
+- Realistic lunar horizon.
+- Proper material roughness.
+- Realistic surface lighting.
+- Detailed astronaut footprints.
+- Rover tyre tracks.
+- Appropriate dust interactions.
+
+Do not create an Earth-like blue sky.
+
+Do not add clouds or atmospheric fog to the Moon.
+
+Understand that the Moon has essentially no atmosphere.
+
+### Lunar physics
+
+Represent lunar gravity correctly.
+
+Movement should feel noticeably different from movement on Earth.
+
+Astronauts should have slightly slower, lighter, more floaty movements.
+
+Walking, jumping, landing, and stopping should feel appropriate for lunar gravity.
+
+The user should not float uncontrollably.
+
+The character must remain grounded whenever required.
+
+### Lunar points of scientific exploration
+
+Create interactive locations and learning experiences around:
+
+- Lunar craters.
+- Regolith.
+- Ancient impact history.
+- Volcanic plains and lunar maria.
+- Lunar highlands.
+- Permanently shadowed regions.
+- Polar water ice.
+- Lava tubes.
+- Lunar geology.
+- Solar exposure.
+- Radiation challenges.
+- Dust challenges.
+- Communication limitations.
+- Future lunar habitats.
+- Resource utilisation.
+
+Let users understand why every subject is important.
+
+Do not randomly scatter objects just to make the world look populated.
+
+Every important location should have a scientific reason to exist.
+
+## B. MARS — ENVIRONMENT REALISM
+
+Mars must have its own distinctive atmosphere and landscape.
+
+Visual characteristics:
+
+- Vast reddish-orange terrain.
+- Naturally varying soil colours.
+- Rocky formations.
+- Distant hills.
+- Craters.
+- Geological layers.
+- Ancient river channels.
+- Large-scale valleys.
+- Realistic dust.
+- Subtle atmospheric scattering.
+- Appropriate sunlight.
+- Long-distance environmental depth.
+- Natural-looking horizon.
+- Geological variation between locations.
+
+Avoid making the entire environment uniformly bright red.
+
+Mars should look like a real planetary landscape rather than a red desert game map.
+
+### Martian physics and atmosphere
+
+Represent the lower gravity appropriately.
+
+Show how the thin atmosphere affects environmental presentation.
+
+Use atmospheric dust effects where appropriate.
+
+Do not simulate Earth's thick atmosphere.
+
+Give Mars its own sound and weather identity.
+
+### Martian scientific exploration locations
+
+Create educational exploration points around:
+
+- Ancient river channels.
+- Geological deposits.
+- Sedimentary rock formations.
+- Ancient lake environments.
+- Water ice.
+- Polar regions.
+- Dust activity.
+- Volcanic features.
+- Atmospheric characteristics.
+- Possible biosignatures.
+- Habitability.
+- Rover exploration.
+- Future human habitats.
+- Oxygen production concepts.
+- In-situ resource utilisation.
+- Radiation protection.
+- Communication delays.
+- Scientific sample collection.
+
+Every location should include a scientifically accurate explanation.
+
+---
+
+# PART 5 — FIX THE ASTRONAUT CHARACTER COMPLETELY
+
+The current character sometimes behaves strangely or experiences visual glitches.
+
+This needs serious attention.
+
+The astronaut is the central character of the experience.
+
+A strange-looking, unstable, glitching character immediately destroys immersion.
+
+Inspect and fix the complete character implementation.
+
+### Character requirements
+
+- Stable body proportions.
+- Properly aligned head, torso, arms, and legs.
+- Correctly positioned joints.
+- Realistic astronaut suit appearance.
+- Natural limb movement.
+- Proper foot placement.
+- No random rotation.
+- No sudden teleportation.
+- No body deformation.
+- No mesh clipping.
+- No floating feet.
+- No ground penetration.
+- No sudden animation switching.
+- No broken transitions.
+- No jittering.
+- No camera collision with the character.
+- No abnormal movement during direction changes.
+
+### Animation system
+
+Create or improve a stable animation state machine.
+
+Include:
+
+- Idle.
+- Walking.
+- Running, if suitable.
+- Lunar walking.
+- Martian walking.
+- Jumping.
+- Landing.
+- Scanning an object.
+- Collecting samples.
+- Inspecting an object.
+- Operating equipment.
+- Entering a rover.
+- Exiting a rover.
+
+Animations must transition smoothly.
+
+Do not restart animation clips unnecessarily on every render.
+
+Use appropriate animation blending.
+
+Use frame-independent updates.
+
+Ensure that the character's movement direction and visual orientation always match.
+
+### Astronaut suit appearance
+
+Improve the astronaut visual quality.
+
+Include realistic visual elements where supported by the existing assets:
+
+- Space helmet.
+- Reflective visor.
+- Protective suit layers.
+- Gloves.
+- Boots.
+- Life-support backpack.
+- Suit connectors.
+- Material variation.
+- Appropriate reflective surfaces.
+- Detailed joints.
+
+The character should look like an astronaut, not a cartoon robot.
+
+Do not introduce strange facial features or distorted proportions.
+
+### Movement responsiveness
+
+Movement must feel immediate and controlled.
+
+There should be no noticeable delay between control input and movement.
+
+Character acceleration and deceleration should be smooth.
+
+Walking should adapt to the local surface.
+
+Prevent the character from walking through rocks, equipment, terrain, or other solid objects.
+
+---
+
+# PART 6 — PHYSICAL ANALOG CONTROL + NEW VIRTUAL ANALOG CONTROL
+
+THIS REQUIREMENT IS CRITICAL.
+
+The existing physical analog controller is already working.
+
+DO NOT remove it.
+
+DO NOT break its current functionality.
+
+DO NOT unnecessarily rewrite its functioning input system.
+
+I want an additional VIRTUAL ANALOG JOYSTICK on the screen so users can control the astronaut using a mouse, touchscreen, or touchpad.
+
+Both control systems must work properly.
+
+## Existing physical analog
+
+Preserve the existing physical analog input exactly wherever possible.
+
+Maintain its current functionality.
+
+Ensure it continues controlling the character correctly.
+
+## New virtual analog
+
+Add a beautifully designed, modern, transparent virtual joystick.
+
+Placement:
+
+- Bottom-left corner of the game screen.
+- Proper spacing from screen edges.
+- Responsive positioning on mobile.
+- Transparent background.
+- Clearly visible joystick base.
+- Movable inner thumbstick.
+- Subtle glow or material effects.
+- Elegant and professional appearance.
+
+### Functionality
+
+The user must be able to click or touch the joystick and drag it in any direction.
+
+The inner knob must physically move in response to the user's pointer or finger.
+
+Movement direction must correspond correctly to the joystick's direction.
+
+Examples:
+
+- Up = move forward.
+- Down = move backward.
+- Left = move left.
+- Right = move right.
+- Diagonal movement = smooth combined movement.
+
+When the user releases the joystick, it must return naturally to the centre.
+
+### Technical requirements
+
+- Proper pointer events.
+- Touch support.
+- Mouse support.
+- Pointer capture where appropriate.
+- Correct joystick radius.
+- Dead-zone configuration.
+- Sensitivity configuration.
+- Normalised movement values.
+- No event conflicts.
+- No accidental page scrolling.
+- Correct release handling.
+- Reset input on lost pointer focus.
+- No movement when the joystick is inactive.
+
+### Most important: both controllers must control the SAME movement system.
+
+Create or improve a central input-management layer.
+
+Physical analog input and virtual analog input must feed into the same movement controller.
+
+Do not create two separate character movement implementations.
+
+Do not allow conflicting inputs to produce jitter.
+
+Define clear input arbitration when multiple controllers are active.
+
+The user should be able to choose between:
+
+1. Physical analog controller.
+2. Virtual analog controller.
+3. Keyboard controls.
+4. Supported gamepad controls.
+
+Do not interfere with existing physical input functionality.
+
+### Additional virtual controls
+
+Where appropriate, add:
+
+- Camera movement control.
+- Interaction button.
+- Jump button.
+- Scan button.
+- Rover entry/exit button.
+- Pause button.
+
+Show only the controls relevant to the current context.
+
+Avoid overcrowding the screen.
+
+Allow users to enable or disable virtual controls in Settings.
+
+---
+
+# PART 7 — INNOVATIVE EXPLORATION FEATURES
+
+Do not add meaningless features simply to make the game look complicated.
+
+Every feature must contribute to education, immersion, or exploration.
+
+Implement the following where compatible with the current architecture.
+
+## 1. Astronaut Field Scanner
+
+Create an interactive scientific scanner.
+
+The user can point at nearby geological features and scan them.
+
+When a scan succeeds, display a compact information panel containing:
+
+- Object name.
+- Object type.
+- Short description.
+- Scientific importance.
+- What scientists have established.
+- What remains uncertain, if applicable.
+
+For example, scanning a lunar rock should reveal its geological significance.
+
+Scanning a Martian surface formation should explain its possible relationship to ancient environmental conditions, without claiming more than the evidence supports.
+
+Do not display unnecessarily long paragraphs.
+
+## 2. Interactive Discovery Points
+
+Important locations should contain discoverable scientific information.
+
+Use subtle visual guidance.
+
+When the astronaut approaches a discovery point, display:
+
+"Scientific Point of Interest"
+
+The user can choose to investigate.
+
+Once investigated, mark the location as discovered.
+
+Do not make every rock glow.
+
+The world should remain visually natural.
+
+## 3. Geological Sample Collection
+
+Allow the user to collect simulated samples.
+
+Include:
+
+- Rock samples.
+- Soil samples.
+- Geological materials.
+- Ice-related sample scenarios where scientifically appropriate.
+
+The collection interaction should feel tactile and responsive.
+
+Display a sample record.
+
+Explain what scientists might investigate using that material.
+
+Keep the experience educational rather than unnecessarily technical.
+
+## 4. Planetary Field Notebook
+
+Create a digital notebook accessible from the astronaut's mission interface.
+
+It should automatically record:
+
+- Locations visited.
+- Objects scanned.
+- Samples collected.
+- Scientific discoveries.
+- Mission milestones.
+- Unanswered questions.
+
+Allow the student to revisit discoveries later.
+
+This should function as a personal scientific exploration journal.
+
+## 5. Mission Control
+
+Create a compact Mission Control interface.
+
+It should show:
+
+- Current planetary location.
+- Active mission.
+- Mission objectives.
+- Exploration progress.
+- Discovered points.
+- Important environmental information.
+- Relevant instructions.
+
+Make it visually similar to a professional astronaut mission interface.
+
+Do not permanently occupy the screen with large panels.
+
+## 6. Planetary Navigation Map
+
+Create an interactive map.
+
+Users should be able to:
+
+- View their current position.
+- See discovered locations.
+- Identify nearby objectives.
+- Place waypoints.
+- Select exploration destinations.
+- Return to landing locations.
+
+Differentiate the Moon and Mars map styles.
+
+Use geographically meaningful locations where reliable data is available.
+
+Clearly identify simulated or fictional terrain areas.
+
+## 7. Future Habitat Exploration
+
+Introduce an educational habitat module.
+
+Users should understand the challenges of maintaining human life away from Earth.
+
+Explain:
+
+- Oxygen.
+- Water.
+- Energy.
+- Temperature control.
+- Radiation protection.
+- Food systems.
+- Waste management.
+- Pressure protection.
+- Communication.
+- Emergency systems.
+
+Allow the user to interact with selected habitat systems.
+
+Keep the interface simple.
+
+## 8. Resource Discovery
+
+Create educational resource discovery activities.
+
+For example:
+
+- Finding potential water ice regions.
+- Understanding lunar regolith.
+- Investigating possible Martian water-related materials.
+- Learning about solar energy.
+- Understanding oxygen and fuel production concepts.
+
+Do not imply that simulated resource extraction represents a proven operational capability.
+
+## 9. Future Explorer Challenges
+
+Create optional scientific challenges.
+
+Examples:
+
+- Identify three different geological formations.
+- Locate a scientifically interesting crater.
+- Examine a potential water-related feature.
+- Collect a sample.
+- Navigate to a designated exploration area.
+- Record an observation.
+- Explain why the discovery matters.
+
+Make challenges engaging and age-appropriate.
+
+Reward learning and observation, not just speed.
+
+---
+
+# PART 8 — TEACH WHAT WE KNOW AND WHAT WE STILL DON'T KNOW
+
+This is the educational heart of the project.
+
+The application should not only explain existing discoveries.
+
+It should also help students understand the unanswered questions of planetary exploration.
+
+Create a dedicated section named:
+
+"THE UNKNOWN FRONTIER"
+
+Divide discoveries into three categories:
+
+1. WHAT WE KNOW
+   Established scientific knowledge and observations.
+
+2. WHAT WE ARE INVESTIGATING
+   Questions scientists are actively researching.
+
+3. WHAT FUTURE EXPLORERS MAY DISCOVER
+   Unanswered questions and possible future investigation areas.
+
+Examples of educational subjects:
+
+### Moon
+
+- How did the Moon form?
+- What can lunar craters reveal about Solar System history?
+- How is water ice distributed in permanently shadowed regions?
+- What are lunar lava tubes like?
+- How could future explorers use local resources?
+- What challenges would long-term lunar habitation involve?
+- What scientific questions could future lunar missions answer?
+
+### Mars
+
+- How long did liquid water exist on ancient Mars?
+- What caused major environmental changes?
+- Where should scientists search for possible evidence of ancient life?
+- What can sedimentary layers reveal?
+- How much accessible water ice exists?
+- What would humans need to survive there?
+- Which geological regions deserve future investigation?
+
+Do not make users believe that possible ancient life has already been confirmed.
+
+Explain the difference between evidence and hypothesis.
+
+The purpose is to develop scientific thinking in the next generation.
+
+---
+
+# PART 9 — CINEMATIC SOUND DESIGN
+
+Sound is essential to immersion.
+
+Improve the entire audio environment.
+
+### Moon audio
+
+Use appropriate sounds through astronaut communication and suit systems.
+
+Examples:
+
+- Suit breathing.
+- Radio communication.
+- Equipment movement.
+- Footsteps transmitted through the suit.
+- Tool interactions.
+- Landing sounds.
+- Mission narration.
+
+Do not add ordinary outdoor wind sounds on an airless lunar surface.
+
+### Mars audio
+
+Create an appropriate environment.
+
+Include subtle atmospheric sounds where scientifically reasonable.
+
+Use suit communication, equipment movement, rover sounds, and environmental ambience.
+
+### Audio management
+
+Create a central audio manager.
+
+Prevent multiple instances of the same sound from playing simultaneously by accident.
+
+Avoid sudden volume spikes.
+
+Keep narration clear above background sound.
+
+Use audio fades during scene transitions.
+
+Add separate controls for narration, sound effects, and background music.
+
+All spoken educational content must be in English only.
+
+---
+
+# PART 10 — PREMIUM UI/UX DESIGN
+
+The application must feel like a premium scientific exploration simulator.
+
+Avoid an ordinary website dashboard appearance.
+
+Avoid excessive buttons and unnecessary information.
+
+The interface should feel like a futuristic astronaut mission system.
+
+## Visual design direction
+
+Use:
+
+- Deep space-inspired surfaces.
+- Professional scientific interface elements.
+- Carefully designed typography.
+- Clean information hierarchy.
+- Subtle glass effects.
+- Minimal visual clutter.
+- Natural animation.
+- Elegant transitions.
+- High-quality icons.
+- Consistent spacing.
+- Appropriate contrast.
+
+The environment must remain the primary focus.
+
+UI should support the experience, not overpower it.
+
+### Main interface
+
+Create a polished main exploration screen.
+
+Clearly communicate:
+
+- Planet selection.
+- Exploration mode.
+- Mission objective.
+- Start exploration.
+- Settings.
+- Learning journal.
+- Progress.
+
+### In-game interface
+
+Keep the active HUD minimal.
+
+Possible elements:
+
+- Mission indicator.
+- Small compass.
+- Interaction prompt.
+- Location indicator.
+- Discovery scanner.
+- Notebook access.
+- Pause menu.
+
+All elements should appear only when relevant.
+
+### Discovery interface
+
+When an object is scanned, display an attractive information card.
+
+The layout should be clear and easy to read.
+
+Use a small scientific illustration or appropriate visual reference when available.
+
+Keep the main explanation concise.
+
+Provide an optional "Explore More" button for additional educational information.
+
+---
+
+# PART 11 — CAMERA AND ENVIRONMENT IMMERSION
+
+Fix the camera system thoroughly.
+
+The camera must:
+
+- Follow the astronaut smoothly.
+- Maintain a natural viewing distance.
+- Avoid entering the character mesh.
+- Avoid terrain penetration.
+- Avoid sudden camera jumps.
+- Handle direction changes naturally.
+- Support appropriate zoom.
+- Work with both controller systems.
+- Remain stable during animations.
+- Transition properly during landing sequences.
+
+Where supported, add:
+
+- Third-person exploration.
+- Optional first-person viewing.
+- Camera rotation.
+- Zoom control.
+- Cinematic camera transitions.
+
+Do not make camera movement confusing or motion-sickness inducing.
+
+Add an option to reduce camera shake and unnecessary motion effects.
+
+---
+
+# PART 12 — REALISM AND DETAIL
+
+The world must not look like a basic demonstration.
+
+Improve visual quality through actual rendering quality and scene composition.
+
+Focus on:
+
+- Physically based materials.
+- Appropriate material roughness.
+- Realistic light response.
+- Proper shadows.
+- Geological textures.
+- Terrain variation.
+- Natural rock placement.
+- Surface imperfections.
+- Atmospheric effects appropriate to each world.
+- Proper object scale.
+- Environmental depth.
+- Realistic astronaut lighting.
+- Natural contact shadows.
+
+Pay attention to small details.
+
+However, do not sacrifice performance for unnecessary graphical effects.
+
+Prefer high-quality reusable assets and optimised rendering.
+
+Do not add random objects or repetitive procedural patterns that make the environment look artificial.
+
+Do not use the same terrain configuration for both planets.
+
+---
+
+# PART 13 — DIFFICULTY AND EDUCATIONAL MODES
+
+Make the simulator useful for beginners and advanced learners.
+
+Create three modes.
+
+### 1. GUIDED EXPLORATION
+
+For students who are new to planetary science.
+
+- Simple instructions.
+- Clear objectives.
+- Helpful prompts.
+- Easy controls.
+- Short scientific explanations.
+- Guided exploration.
+
+### 2. FREE EXPLORATION
+
+For users who want to discover things independently.
+
+- Minimal guidance.
+- Independent movement.
+- Interactive scanners.
+- Open exploration.
+- Personal discovery notebook.
+
+### 3. SCIENCE CHALLENGE
+
+For users who want to test their knowledge.
+
+- Scientific exploration objectives.
+- Observation-based challenges.
+- Sample identification.
+- Geological comparison.
+- Knowledge questions.
+- Mission completion evaluation.
+
+Do not make the modes unnecessarily complicated.
+
+---
+
+# PART 14 — EDUCATIONAL CONTENT QUALITY
+
+Every educational description should be:
+
+- Scientifically reliable.
+- Easy to understand.
+- Concise.
+- Interesting.
+- Age-appropriate.
+- Contextually relevant.
+- Written in clear English.
+
+Avoid very long narration.
+
+Use short spoken descriptions and optional extended reading.
+
+For example, after scanning a lunar crater:
+
+"Impact craters preserve clues about the violent history of the Moon. Studying their size and structure helps scientists understand ancient collisions."
+
+After scanning a Martian channel:
+
+"This channel resembles a landscape shaped by flowing water. Its geological structure helps scientists investigate whether liquid water once existed here."
+
+These are examples of the expected educational style.
+
+Never overload users with technical terminology without explaining it.
+
+---
+
+# PART 15 — PERFORMANCE AND TECHNICAL STABILITY
+
+A beautiful game that constantly lags or breaks is not a successful game.
+
+Optimise the entire application.
+
+Inspect and fix:
+
+- Excessive component rerenders.
+- Memory leaks.
+- Unnecessary scene recreation.
+- Repeated asset loading.
+- Unoptimised textures.
+- Excessive draw calls.
+- Expensive real-time effects.
+- Incorrect animation updates.
+- Unstable event listeners.
+- Physics update problems.
+- Camera update problems.
+- Audio duplication.
+- Unhandled state transitions.
+
+### Performance expectations
+
+Target smooth performance on normal desktop hardware.
+
+Use adaptive quality settings.
+
+Reduce visual effects on weaker devices.
+
+Use Level of Detail where appropriate.
+
+Dispose of unnecessary resources correctly.
+
+Ensure that scene transitions do not cause unnecessary loading freezes.
+
+Make sure movement and animation remain independent of frame rate.
+
+Preserve the application's existing technology stack unless there is a compelling technical reason to change it.
+
+Do not introduce unnecessary packages, paid APIs, external services, or API-key dependencies.
+
+Use existing project capabilities wherever possible.
+
+---
+
+# PART 16 — MOBILE AND RESPONSIVE EXPERIENCE
+
+The simulator should work across desktop and mobile screens where technically supported.
+
+Mobile requirements:
+
+- Responsive joystick.
+- Proper button spacing.
+- No accidental page scrolling during joystick operation.
+- Touch-friendly interaction.
+- Readable educational panels.
+- Adjustable graphical quality.
+- Adaptive HUD.
+- No overlapping controls.
+- Proper portrait and landscape handling where appropriate.
+
+Desktop requirements:
+
+- Keyboard controls.
+- Mouse camera controls.
+- Existing physical analog support.
+- Virtual analog option.
+- Full-screen mode.
+- Responsive menus.
+
+Do not let the virtual joystick cover important content.
+
+---
+
+# PART 17 — USER EXPERIENCE AND ACCESSIBILITY
+
+Build a comfortable learning experience.
+
+Include:
+
+- English captions.
+- Adjustable narration volume.
+- Adjustable sound effects.
+- Clear mission instructions.
+- Easy pause and resume.
+- Skip cinematic sequences.
+- Reduced motion option.
+- Readable text.
+- High-contrast option.
+- Adjustable control sensitivity.
+- Remappable controls where feasible.
+- Proper button feedback.
+- Clear interaction indicators.
+
+Avoid requiring users to understand complicated controls before they can begin exploring.
+
+Create a very short onboarding tutorial.
+
+Teach movement, scanning, interaction, and navigation through simple guided actions.
+
+---
+
+# PART 18 — IMPORTANT NEW INNOVATION: FUTURE GENERATION SCIENTIFIC JOURNEY
+
+Introduce an optional educational feature named:
+
+"THE NEXT FRONTIER"
+
+This feature should connect present-day discoveries with future exploration.
+
+Create a collection of scientific questions that future generations may help answer.
+
+Examples:
+
+- Could humans eventually establish permanent lunar research stations?
+- How might future astronauts use local resources?
+- What could the deepest lunar craters teach us?
+- Where should future Mars explorers investigate?
+- Could geological samples reveal signs of ancient microbial environments?
+- How should future habitats protect people from radiation?
+- How could future exploration systems work with limited resources?
+
+For each question, explain:
+
+1. What we currently know.
+2. What the challenge is.
+3. What technology or research may help.
+4. What future explorers could investigate.
+
+Allow learners to save interesting questions in their field notebook.
+
+Make this a meaningful part of the experience rather than another ordinary menu.
+
+---
+
+# PART 19 — FINAL QUALITY ASSURANCE
+
+Before considering the work complete, thoroughly test the application.
+
+### Test the Moon
+
+- Can the user start the Moon mission?
+- Does the landing sequence work?
+- Does the correct welcome voice play?
+- Is the lunar environment visually distinct?
+- Does the character move properly?
+- Does the virtual analog work?
+- Does the original physical analog still work?
+- Can the user scan objects?
+- Do discovery points work?
+- Are collisions correct?
+- Can the user access the notebook?
+- Does the camera remain stable?
+
+### Test Mars
+
+- Does the Mars landing sequence work?
+- Does the Mars welcome voice play?
+- Is the atmosphere appropriate?
+- Is the terrain distinct from the Moon?
+- Does character movement work correctly?
+- Do scanning and interaction systems function?
+- Do missions work?
+- Does the map work?
+- Are scientific explanations accurate?
+
+### Test the character
+
+Check for:
+
+- Jitter.
+- Teleportation.
+- Broken joints.
+- Incorrect rotation.
+- Ground penetration.
+- Floating feet.
+- Animation glitches.
+- Movement lag.
+- Camera clipping.
+- Interaction bugs.
+
+### Test the controllers
+
+Test the physical analog and virtual analog separately.
+
+Then test transitions between them.
+
+Check every direction, diagonals, release, idle state, and camera interaction.
+
+The virtual joystick must actually control the character and must not be merely decorative.
+
+### Test audio
+
+- No Hindi voice.
+- No mixed-language narration.
+- No duplicated welcome voice.
+- No overlapping narration.
+- Correct planet-specific voice.
+- Appropriate volume.
+- Proper English captions.
+- No audio continuing unintentionally after leaving a scene.
+
+### Test the UI
+
+- No broken buttons.
+- No invisible interactions.
+- No overlapping panels.
+- No clipped text.
+- No incorrect responsive positioning.
+- No unnecessary information.
+- No visual glitches.
+
+Fix every issue that you identify.
+
+Do not claim a test passed unless it was actually performed.
+
+---
+
+# PART 20 — IMPLEMENTATION PRIORITIES
+
+Work in this order.
+
+**PRIORITY 1 — Stability**
+
+Fix the existing character bugs, animation issues, movement problems, camera problems, and rendering instability.
+
+**PRIORITY 2 — Controls**
+
+Preserve the functioning physical analog and implement the additional virtual analog.
+
+Make both work through the same movement system.
+
+**PRIORITY 3 — Immersion**
+
+Improve Moon and Mars environmental realism, lighting, materials, animations, and camera behaviour.
+
+**PRIORITY 4 — Landing and voice**
+
+Implement proper cinematic landing sequences and English-only planet-specific welcome narration.
+
+**PRIORITY 5 — Scientific exploration**
+
+Implement scanning, discovery points, geological learning, samples, maps, and the field notebook.
+
+**PRIORITY 6 — Advanced educational systems**
+
+Add future habitat learning, resource discovery, Unknown Frontier, and scientific challenges.
+
+**PRIORITY 7 — Final polish**
+
+Responsive design, performance optimisation, accessibility, audio controls, and full testing.
+
+---
+
+# FINAL NON-NEGOTIABLE INSTRUCTIONS
+
+1. Work on the existing application, not an unrelated replacement.
+2. Preserve all existing working features.
+3. Do not break the existing physical analog controller.
+4. Add the virtual analog as an additional control method.
+5. Fix the character's abnormal behaviour completely.
+6. Keep Moon and Mars scientifically and visually distinct.
+7. Use English-only spoken narration.
+8. Implement actual landing-triggered welcome voice events.
+9. Make the environment genuinely immersive.
+10. Keep the learning experience simple and enjoyable.
+11. Prioritise functionality over decorative features.
+12. Avoid unnecessary menus, buttons, and information overload.
+13. Do not use fake scientific claims.
+14. Clearly label simulated and hypothetical discoveries.
+15. Do not add features that cannot actually function.
+16. Never use placeholder buttons for unfinished features.
+17. Avoid breaking the existing application architecture.
+18. Verify every important change.
+19. Fix errors rather than hiding them.
+20. Do not stop after presenting a plan.
+
+## THE FINAL EXPERIENCE
+
+Imagine a student putting on an astronaut helmet, entering a spacecraft, approaching the Moon, and finally landing.
+
+The student hears:
+
+"Welcome to the Moon..."
+
+The camera reveals a vast lunar landscape.
+
+The student begins walking using the analog controller or virtual joystick.
+
+They notice a geological formation.
+
+They approach it, scan it, and learn something that scientists have discovered.
+
+They find another location with an unanswered scientific question.
+
+They record it in their exploration notebook.
+
+They begin to understand that exploration is not just about visiting another world. It is about asking questions, collecting evidence, and discovering what humanity does not yet know.
+
+The same experience continues on Mars, with a completely different environment, scientific challenges, and exploration objectives.
+
+**The ultimate goal is to make users feel like real planetary explorers while educating them about the past, present, and future of space science.**
+
+Build something that a student would genuinely love exploring, a teacher would be happy to use, and a future generation would remember.
+
+Do not settle for a basic playable demo.
+
+Aim for a polished, scientifically grounded, deeply immersive planetary exploration experience.

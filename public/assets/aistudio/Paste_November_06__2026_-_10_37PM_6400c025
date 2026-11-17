@@ -1,0 +1,665 @@
+# COSMIC EXPLORER: BEYOND EARTH
+# ULTIMATE REALISM, GAMEPLAY RESTORATION & VISUAL QUALITY UPGRADE
+
+You are now the Principal 3D Game Developer, Senior Unreal-Quality Environment Artist, Real-Time Simulation Engineer, Character Animation Specialist, Planetary Science Visualisation Expert, Sound Designer and Educational Game Experience Architect responsible for upgrading the existing Cosmic Explorer: Beyond Earth application.
+
+This is an existing project. DO NOT start a new project, generate another app, replace the application with a template or destroy working features. Inspect the actual existing source code, current scene architecture, components, assets, rendering configuration, gameplay systems, previous checkpoints and current visual preview before making changes.
+
+My original 615-page Phase 1–20 specification is the authoritative product blueprint. Preserve its original vision, terminology, 20-phase sequence, technology stack and educational objectives.
+
+## PRIMARY VISION
+
+I do not want a conventional planetary information website where a user clicks Earth, Moon or Mars and reads basic facts.
+
+I want an immersive, browser-based 3D space exploration game in which a student genuinely feels like an astronaut exploring another world.
+
+The target experience should have the visual and interaction quality of a professionally developed third-person exploration game, using the polish, camera presentation, character scale, movement responsiveness, environmental detail and immersive world design associated with high-quality games such as BGMI as a QUALITY REFERENCE ONLY.
+
+Do not copy BGMI's copyrighted characters, maps, weapons, interface, sound effects or gameplay mechanics. Cosmic Explorer remains a peaceful educational scientific exploration game, not a shooter or combat game.
+
+The user should be able to enter the universe, travel to Earth, land on the Moon or Mars, walk freely through actual 3D environments, observe realistic landscapes, inspect scientific objects, listen to educational narration, collect discoveries and complete scientific exploration missions.
+
+The most important success criterion is that the game must FEEL PLAYABLE AND IMMERSIVE, not merely look like a beautiful 3D illustration.
+
+# PART 1 — DEEP AUDIT AND RESTORE THE REAL GAME EXPERIENCE
+
+Before changing code, perform a complete repository and implementation audit.
+
+Inspect:
+
+- All existing React and React Three Fiber components.
+- Three.js scene and renderer configuration.
+- Planet configuration and destination navigation.
+- Existing universe scene.
+- Earth Home Base and Mission Control.
+- Existing astronaut model and character controller.
+- Camera follow, orbit and zoom behaviour.
+- Physics, gravity, colliders and ground-contact logic.
+- Moon and Mars environments.
+- Transition system.
+- Textures, 3D models and asset manifest.
+- Scientific content registry.
+- Object interactions and discovery systems.
+- Narration service and voice selection.
+- HUD, backpack, missions, quizzes and persistence.
+- Responsive design and mobile controls.
+- Console errors, missing dependencies and failed asset requests.
+- Actual project build and runtime status.
+
+Create an implementation audit with these statuses:
+
+1. Working and verified.
+2. Present but not functionally verified.
+3. Partially implemented.
+4. Missing.
+5. Broken or regressed.
+
+For every broken or missing feature, identify the actual file, component, state or dependency responsible.
+
+IMPORTANT: The current project was originally developed incrementally. Do not treat all future-phase features as already implemented.
+
+If an older working version or checkpoint exists, compare it before restoring or modifying any system. Restore only the specific broken functionality. Do not perform a destructive full rollback.
+
+Before substantial changes, preserve the current working version using the available project checkpoint or Git history. Make logical changes in small, reversible batches.
+
+Do not declare a feature complete because a button, card, tab, badge or roadmap label exists. It must perform its intended action.
+
+# PART 2 — RESTORE A TRUE IMMERSIVE GAME EXPERIENCE
+
+The current experience must not be limited to a dark space background with large planet spheres and information cards.
+
+Build a coherent journey:
+
+UNIVERSE → DESTINATION SELECTION → CINEMATIC LANDING → PLAYABLE PLANETARY WORLD → ASTRONAUT EXPLORATION → SCIENTIFIC DISCOVERY → RETURN TO UNIVERSE.
+
+The universe view and the planetary exploration view are different environments.
+
+When selecting Earth, Moon or Mars, the application must transition into a genuinely explorable environment rather than simply enlarging the selected planet or displaying another information panel.
+
+Keep the universe accessible through a clear return-to-space action.
+
+The world transition must preserve valid player progress, character state and discovered items.
+
+Keep Sun as an inspectable celestial object in the universe, but do not create a normal walkable Sun environment. It is a star with extreme plasma and thermal conditions, not a solid planetary surface.
+
+The first playable experience should be approachable:
+
+- A brief cinematic introduction.
+- Clear mission briefing.
+- An understandable starting location.
+- Visible astronaut.
+- Simple movement instructions.
+- A meaningful first scientific discovery.
+- An easy route back to the universe.
+
+Do not surround the main experience with oversized UI panels. The environment and the astronaut must receive visual priority.
+
+# PART 3 — ASTRONAUT CHARACTER: COMPLETE VISUAL AND ANIMATION UPGRADE
+
+The current astronaut appearance and camera framing are not satisfactory. Fix both.
+
+The astronaut must be clearly recognisable as a professional space-exploration character, not a cartoon, simple toy, floating helmet or poorly proportioned human figure.
+
+Inspect the current model first. If it is a low-quality primitive or unsuitable placeholder, replace or upgrade it.
+
+Preferred character design:
+
+- Anatomically believable human proportions.
+- Detailed white EVA exploration suit.
+- Properly shaped helmet.
+- Reflective gold or dark reflective visor.
+- Detailed life-support backpack.
+- Shoulder, elbow, knee and glove joints.
+- Appropriate boots and gloves.
+- Suit fabric, seams, panel joints and equipment attachments.
+- Restrained equipment indicator lights.
+- Realistic material roughness and controlled reflections.
+
+FACE PRIVACY AND CHARACTER IDENTITY:
+
+Remove any uploaded personal face photograph, personal face texture, face-based avatar or resemblance to the account owner from the astronaut and game interface. Do not use the user's real face as the player character. Use a fully enclosed astronaut helmet with an attractive reflective visor. The astronaut should look like an original fictional space explorer, not an identifiable real person.
+
+Character model requirements:
+
+- Prefer a genuinely rigged GLB/GLTF model with suitable animation clips.
+- Verify the source and licence of any third-party model.
+- Do not use paid assets or assets with unclear usage permissions.
+- If no suitable model is available, create a polished procedural astronaut as a fallback, but document its limitations honestly.
+- Keep the visible character model separate from the authoritative movement controller and collider.
+- Ensure that model position, rotation, shadow, camera target and physics body stay aligned.
+
+Implement and synchronise:
+
+- Idle animation.
+- Walking animation.
+- Running animation.
+- Jump animation.
+- Falling animation.
+- Landing animation.
+- Directional turning and smooth movement transitions.
+
+Animation must respond to actual character movement and grounded state. A stationary astronaut must not keep playing a walking animation.
+
+Do not simulate movement by translating only the visual character mesh while its real collision body remains stationary.
+
+# PART 4 — FIX THE ASTRONAUT CAMERA AND CHARACTER ZOOM
+
+The current character framing is too zoomed in, and the astronaut is not properly visible.
+
+This is a critical issue.
+
+Implement a professional third-person exploration camera inspired by polished modern 3D games.
+
+During ordinary gameplay:
+
+- Show the complete astronaut from head to boots.
+- Keep the astronaut at a comfortable distance from the camera.
+- Position the camera behind and slightly above the character.
+- Maintain sufficient view of the surrounding terrain.
+- Avoid excessive close-up framing.
+- Prevent the camera from entering the character model.
+- Prevent the camera from clipping through rocks and terrain where practical.
+- Keep the character centred or slightly below the vertical centre of the gameplay viewport.
+- Use a sensible field of view for a third-person exploration game.
+- Smoothly follow the actual physics controller.
+- Allow controlled mouse camera rotation.
+- Allow appropriate zoom adjustment.
+- Include a reset camera action.
+
+The character should occupy a moderate portion of the screen, approximately 15–25% of the gameplay viewport height under the normal camera configuration, adjusted appropriately to the actual model and screen aspect ratio.
+
+The complete body must remain visible during normal walking and running. Do not frame only the helmet, shoulders or upper body.
+
+Make camera distance, height, look-at offset, smoothing and zoom limits configurable centrally.
+
+Do not reset camera position or orientation unexpectedly every time a key is pressed or an interface panel is opened.
+
+On mobile, adapt the camera and controls without making the astronaut disappear behind the interface.
+
+# PART 5 — REAL GAMEPLAY MOVEMENT AND PHYSICS
+
+Implement genuine world-space third-person controls.
+
+Desktop controls:
+
+- W / Up Arrow: forward.
+- S / Down Arrow: backward.
+- A / Left Arrow: left.
+- D / Right Arrow: right.
+- Space: jump.
+- Mouse movement or drag: camera look according to the implemented control model.
+- E: inspect a nearby scientific object.
+- Esc: pause or return to an appropriate safe state.
+
+Mobile controls:
+
+- Responsive virtual joystick.
+- Jump button.
+- Inspect button.
+- Camera drag.
+- Interactions that do not conflict with ordinary scrolling or UI controls.
+
+Movement requirements:
+
+- Camera-relative movement.
+- Normalised diagonal movement.
+- Smooth acceleration and deceleration.
+- Responsive directional changes.
+- Smooth character turning.
+- Actual horizontal and vertical velocity.
+- Real jumping and falling.
+- Valid ground detection.
+- Stable landing.
+- Collision against physical terrain and rocks.
+- No walking through large obstacles.
+- No floating above the ground.
+- No falling through the world.
+- No unintended double jumps.
+- No frame-rate-dependent movement.
+
+Use one shared movement controller across planetary environments. Do not create separate duplicated movement systems for Earth, Moon and Mars.
+
+# PART 6 — SCIENTIFICALLY MEANINGFUL PLANETARY GRAVITY
+
+Use the following approximate reference gravity values:
+
+Earth: 9.81 m/s².
+Moon: 1.62 m/s².
+Mars: 3.71 m/s².
+
+Apply these values to real character physics using one consistent world-scale conversion.
+
+With comparable initial jump velocity:
+
+- Earth must feel relatively grounded.
+- Moon must produce a noticeably higher and longer jump.
+- Mars must produce intermediate behaviour.
+
+These differences must emerge from actual physics calculations, not from merely changing animation playback speed.
+
+Create a distinctive educational feature called GRAVITY LAB.
+
+Gravity Lab should allow the student to:
+
+1. Select Earth, Moon or Mars.
+2. Use the same character and comparable jump impulse.
+3. Perform a real jump in each environment.
+4. Compare measured simulated airtime.
+5. Compare actual jump height.
+6. View a simple height-versus-time graph.
+7. Understand why gravity changes the trajectory.
+
+Clearly distinguish game-world measurements and simplified simulation assumptions from real experimental measurements. Do not invent test results.
+
+# PART 7 — EARTH ENVIRONMENT: A REAL HOME BASE
+
+Earth must offer more than a large globe.
+
+Implement the Earth Home Base specified in Phase 3:
+
+- A professionally designed exploration headquarters.
+- Landing pad and astronaut arrival experience.
+- Mission Control.
+- Explorer Profile.
+- Destination planning and travel preparation.
+- Beginner-friendly movement tutorial.
+- Clear first mission.
+
+The Earth visual environment should include:
+
+- Realistic blue sky and sunlight.
+- Terrain with genuine geometry.
+- Believable landscape and vegetation appropriate to the chosen region.
+- Walkable ground and valid collision.
+- A visible horizon and atmospheric depth.
+- A coherent landing area.
+- Appropriate shadows.
+- Interactable educational objects when the relevant phases are implemented.
+
+Earth should look familiar but visually sophisticated.
+
+Ensure the home-base experience is a genuine playable environment where the astronaut is visible and controllable.
+
+# PART 8 — MOON: HIGHEST PRIORITY ENVIRONMENT QUALITY
+
+The Moon must become a genuinely explorable world, not a dark grey sphere or a flat platform.
+
+There are two different Moon appearances that must not be confused:
+
+A. MOON FROM SPACE:
+
+When seen from space, the illuminated Moon must have a natural pale grey, silver-white or muted lunar-white appearance. It must remain visibly distinct against the dark universe.
+
+Do not make it brown, strongly yellow, artificial blue or completely glowing pure white.
+
+Its dark lunar maria, crater structures, surface relief and natural directional shading must remain visible.
+
+B. ASTRONAUT ON THE MOON:
+
+When the astronaut enters the lunar environment, the surface should look like authentic Moon regolith:
+
+- Fine grey lunar soil.
+- Angular rocks.
+- Scattered boulders.
+- Small impact depressions.
+- Medium and large craters.
+- Raised crater rims.
+- Gentle ridges.
+- Sloping terrain.
+- Distant cratered horizon.
+- Clear sunlight and strong natural shadows.
+- Near-black sky without ordinary Earth-like clouds or blue atmospheric haze.
+
+Build real three-dimensional terrain with meaningful elevation variation.
+
+Crater geometry should include actual depressions and raised rims. Do not generate repetitive decorative ring patterns or represent all craters through painted circles.
+
+Use controlled multi-scale terrain generation with stable seeded layouts.
+
+The astronaut must collide with the real playable terrain and cannot walk through major geological obstacles.
+
+Keep a coherent, bounded lunar exploration region rather than attempting to create an entire Moon-sized world in the browser.
+
+Use appropriately licensed imagery, textures and scientific data where practical. If procedural terrain is used, label it as a representative educational landscape rather than claiming a precise geographical reconstruction.
+
+Lunar surface lighting must preserve the difference between directly illuminated ground and crater shadows. Do not make every shadow completely black; retain sufficient visibility for navigation without introducing Earth-like atmospheric fill light.
+
+Add meaningful landmarks and discoveries only after verifying their actual geographical context. Apollo 11 landing region, Tycho crater, Oceanus Procellarum or the lunar south polar region may be considered, but do not put geographically distant features together as though they are adjacent.
+
+# PART 9 — MARS: COMPLETE REALISTIC EXPLORATION WORLD
+
+Mars must feel visibly and physically different from the Moon.
+
+MARS FROM SPACE:
+
+Display a recognizable rust-red and ochre planet with visible surface detail and a distinct silhouette against space.
+
+The planet must not disappear into the black background. Keep suitable directional illumination, calibrated exposure, controlled atmospheric separation and adequate surface contrast.
+
+MARTIAN SURFACE:
+
+Create:
+
+- Rusty red, ochre and burnt-orange soil.
+- Fine dusty ground.
+- Varied geological rocks.
+- Large and small boulders.
+- Real terrain elevations.
+- Shallow depressions.
+- Craters with actual shape variation.
+- Exposed rock outcrops.
+- Ridges and distant mountains.
+- A meaningful exploration path.
+- Suitable horizon and sky.
+- Restrained atmospheric dust effects.
+- Actual terrain collision.
+
+Avoid a uniformly red desert, repetitive black circular crater patterns, identical rocks, flat ground disguised by texture maps and excessive red screen tint.
+
+Develop one coherent playable Mars region with a carefully planned geological composition.
+
+Include scientifically grounded exploration references to Perseverance, Curiosity, Jezero Crater, sedimentary rocks, Martian dust and relevant geological formations when appropriate.
+
+Clearly distinguish:
+
+- Actual mission photographs.
+- Real scientific observations.
+- Geographical landmarks.
+- Representative educational models.
+- Fictional training exhibits.
+
+Do not label fictional structures as actual Martian infrastructure or place unrelated famous features together as one real location.
+
+# PART 10 — UNIVERSE VIEW: EARTH, MOON AND MARS MUST NEVER DISAPPEAR
+
+This is another critical visual problem.
+
+The current dark universe composition can make the planets blend into the black background or become hidden behind the interface.
+
+Correct the following:
+
+1. Earth must remain clearly visible with blue oceans, recognisable continents and a natural atmospheric rim.
+2. The Moon must appear pale grey/silver-white with visible craters.
+3. Mars must remain distinguishable through its natural rusty-red and ochre surface.
+4. The Sun must appear luminous but must not wash out the entire scene.
+5. All selectable destinations must remain visible in the initial camera composition.
+6. The Moon must be positioned recognisably near Earth.
+7. Mars must have sufficient separation to be identified as another destination.
+8. The camera must frame the complete intended universe composition.
+9. Avoid placing panels directly over the most important parts of the planets.
+10. Use adaptive framing for different monitor aspect ratios.
+
+Use a well-defined primary Sun light source. Use a restrained fill contribution only where necessary for readability, without making planets appear self-luminous.
+
+Planet sizes and distances may use illustrative scale for browser usability, but disclose that they are not to scale. Do not represent a simplified artistic composition as a mathematically accurate orbital simulation.
+
+Use a performant 3D starfield distributed in depth instead of relying solely on a flat star background.
+
+Avoid excessive black exposure, overly dark planet materials, clipping, huge atmospheric outlines and excessive bloom.
+
+The user must be able to orbit, zoom and pan the scene and return safely to the default composition.
+
+# PART 11 — REAL SCIENTIFIC DISCOVERIES
+
+Preserve the exact Phase 9 and Phase 10 interaction system.
+
+The astronaut must physically approach a registered scientific object.
+
+Show a clear prompt:
+
+"Press E to Inspect"
+
+On mobile:
+
+"Tap to Inspect"
+
+Use a shared object registry and interaction manager with stable unique IDs, original planet ID, world position, category, interaction radius and valid educational content reference.
+
+When the user interacts, open a proper immersive discovery experience.
+
+The discovery presentation must include:
+
+- Real 3D object or accurately labelled representative model.
+- Rotate and zoom controls.
+- Reset view.
+- Planet of origin.
+- Object name.
+- Category.
+- What Is It?
+- How Does It Work?
+- What Have Scientists Learned?
+- Why Does It Matter?
+- Explore Further.
+- Verified scientific source links.
+- Optional narration.
+- Collect Discovery action.
+
+Do not show generic Earth/Moon/Mars descriptions as a substitute for individual scientific objects.
+
+Preserve astronaut location, camera state and active mission progress while the discovery is open and restore them when it closes.
+
+Phase 14 requires at least eight substantive Moon discoveries and eight substantive Mars discoveries, with source-backed educational content.
+
+# PART 12 — VISUAL AND MATERIAL QUALITY
+
+Create a coherent art direction inspired by premium realistic 3D exploration games.
+
+Use:
+
+- High-quality but efficiently sized textures.
+- Real surface material variation.
+- Natural material roughness.
+- Proper colour-space handling.
+- Detailed but performant geometry.
+- Directional sunlight.
+- Well-configured shadow maps.
+- Stable contact shading.
+- Controlled atmospheric rendering.
+- Subtle particles only where physically appropriate.
+- Proper camera depth and framing.
+- Clean readable interface typography.
+
+Do not solve poor graphics by adding excessive neon borders, blur, bloom or glowing rings.
+
+Distinguish visual texture detail from actual geometry and collision. A bump map must never be treated as a physical obstacle.
+
+Provide Low, Medium and High quality presets with genuinely different settings for texture resolution, shadow quality, particles, render resolution and optional effects.
+
+Maintain strong visual quality on ordinary student laptops.
+
+# PART 13 — VOICE AND AUDIO EXPERIENCE
+
+Replace any poor or unsuitable current narrator configuration with a polished bilingual voice-guided education experience.
+
+I prefer a warm, expressive, melodious, clear Indian female narrator with natural Hindi and English delivery, a calm educational tone, graceful pacing and pleasant pronunciation.
+
+Use an original narrator style with these characteristics. Do not impersonate or clone Shreya Ghoshal or another real singer/performer. Only use a real person's voice with properly licensed recordings and explicit permission.
+
+For the free implementation:
+
+- Follow the original Phase 11 browser-native Web Speech API requirement.
+- Detect actual voices available on the current device.
+- Prefer compatible Indian English and Hindi voices when available.
+- Support English and Hindi text separately.
+- Provide voice preview and voice selection.
+- Show readable synchronised captions.
+- Play, pause, resume, stop and replay controls.
+- Prevent multiple narrations from running simultaneously.
+- Stop narration when the player changes discoveries or destinations.
+- Never start narration automatically without user interaction.
+- Clearly explain when the device lacks a suitable Hindi voice.
+
+Do not send text to an external paid voice-generation API.
+
+Add optional and user-controlled ambient sound, UI effects and discovery sounds.
+
+Do not imply that ordinary sound travels through the vacuum of space. Use suit-radio, interface or educational audio cues where appropriate.
+
+All essential features must work while muted.
+
+# PART 14 — CHARACTER-TO-WORLD INTERACTION AND IMMERSION
+
+The game must create a feeling of presence.
+
+Add appropriate interaction feedback:
+
+- Astronaut footsteps and suit movement where suitable.
+- Subtle landing response.
+- Nearby-object prompt.
+- Scientific scanner feedback.
+- Discovery camera focus.
+- Clear mission briefing.
+- Interactive observation points.
+- Collectible confirmation.
+- Smooth but short transitions.
+
+Do not make the game noisy or visually cluttered.
+
+The user should be able to explore without constantly opening website-like panels.
+
+Keep educational content accessible without covering the world unnecessarily.
+
+# PART 15 — PERFORMANCE AND TECHNICAL OPTIMISATION
+
+Keep the same React, Vite, JavaScript, Three.js, React Three Fiber and Drei stack.
+
+Optimise:
+
+- Geometry and material reuse.
+- Instanced rocks and repeated objects.
+- Texture sizes and compression where compatible.
+- Environment lazy loading.
+- Resource disposal.
+- React render frequency.
+- Event-listener cleanup.
+- Collision geometry complexity.
+- Shadow map resolution.
+- Particle count.
+- Camera update loops.
+- WebGL renderer settings.
+- Mobile touch handling.
+
+Do not show hardcoded FPS values. Any FPS indicator must report actual measured frame rate.
+
+Avoid memory leaks, duplicate Canvas instances, duplicate physics bodies, competing cameras, repeated animation mixers and stale scene references.
+
+Provide recoverable loading errors and graceful texture/model fallbacks.
+
+Do not add another game engine or duplicate physics system without a demonstrated technical reason.
+
+# PART 16 — DEVELOPMENT ORDER AND STRICT PROJECT PRESERVATION
+
+Implement and integrate the missing requirements in the original project sequence:
+
+1. Restore and verify the universe foundation.
+2. Improve interactive 3D universe composition and planet visibility.
+3. Restore and complete Earth Home Base and Mission Control.
+4. Build the proper astronaut character and third-person controller.
+5. Implement real planetary physics and gravity.
+6. Build the playable Moon environment.
+7. Build the playable Mars environment.
+8. Complete destination transitions and world navigation.
+9. Implement the universal scientific object interaction system.
+10. Implement the immersive scientific discovery experience.
+11. Integrate Hindi and English voice-guided narration.
+12. Complete the virtual Explorer Backpack.
+13. Complete the data-driven mission system.
+14. Complete the verified scientific content library.
+15. Complete educational quizzes.
+16. Integrate the unified gameplay HUD.
+17. Refine graphics, audio, materials and performance.
+18. Perform a complete technical audit and bug-fixing pass.
+19. Improve student usability and accessibility.
+20. Perform final integration and production validation.
+
+Do not skip dependency phases and do not mark future phases complete because a placeholder button exists.
+
+Do not attempt to replace the entire application in a single uncontrolled rewrite.
+
+Work in coherent implementation batches. After each batch, verify previous working systems and run the production build.
+
+If a model, animation, texture, scientific dataset or API is unavailable, provide an honest documented fallback rather than claiming success.
+
+# PART 17 — ACCEPTANCE TESTS
+
+Before reporting success, verify the actual application behaviour.
+
+UNIVERSE TESTS:
+- Earth, Moon and Mars are simultaneously identifiable.
+- Moon is naturally pale grey/white in space.
+- Mars is visibly rusty-red.
+- Sun illumination does not overexpose planets.
+- All destinations can be selected.
+- Orbit, zoom, pan and reset work.
+- Important planets are not hidden by the UI.
+
+ASTRONAUT TESTS:
+- Full astronaut visible at ordinary camera distance.
+- No personal human face or face photo appears.
+- Suit and helmet look recognisable.
+- Walking and running alter actual world position.
+- Jumping changes the actual physics body position.
+- Idle/walking/jumping/landing states synchronise.
+- Camera follows smoothly without extreme zoom.
+
+PLANETARY TESTS:
+- Earth Home Base is walkable.
+- Moon terrain has actual elevation and craters.
+- Moon collisions work.
+- Mars has distinctive terrain and collisions.
+- Earth, Moon and Mars use correct approximate gravity.
+- Returning to space does not lose progress.
+
+DISCOVERY TESTS:
+- Nearby objects trigger correct prompts.
+- E activates the exact selected object.
+- Correct educational record opens.
+- Source links are genuine.
+- Collect Discovery updates persistent inventory.
+- Closing the panel restores the same world and player state.
+
+VOICE TESTS:
+- Available Hindi voices are detected correctly.
+- Available English voices work.
+- Narration can be paused, stopped and replayed.
+- Captions remain readable.
+- Missing voice support is reported honestly.
+
+PERFORMANCE TESTS:
+- Production build succeeds.
+- No critical console errors.
+- No repeated Canvas or physics initialisation.
+- Assets load and dispose properly.
+- Gameplay remains responsive at supported quality settings.
+
+# PART 18 — FINAL REPORT
+
+After implementation, provide:
+
+1. What was broken or missing in the original build.
+2. What was restored.
+3. What visual improvements were actually implemented.
+4. Planet-by-planet changes.
+5. Astronaut model and animation details.
+6. Camera and character framing changes.
+7. Actual physics and gravity implementation.
+8. Asset sources and verified licences.
+9. Voice availability and limitations.
+10. Features still incomplete.
+11. Tests actually performed and their results.
+12. Production build result.
+13. Recommended next development batch.
+
+Do not claim a BGMI-equivalent complete game or a finished 20-phase implementation merely because a preview looks better.
+
+The goal is a genuinely immersive, highly polished, scientifically credible and fully playable educational 3D space exploration game.
+
+MOST IMPORTANT FINAL REQUIREMENT:
+
+When I open the Moon environment, I should clearly see a complete astronaut standing at a realistic distance from the third-person camera, on detailed grey lunar terrain with craters, rocks, hills, natural sunlight and deep shadows. I should be able to walk, run, jump under lunar gravity, inspect scientific discoveries and return to the same world without losing progress.
+
+When I open Mars, I should feel that I have reached a completely different planet, with authentic rusty-red geology, varied terrain, a suitable Martian sky and a fully controllable astronaut.
+
+When I return to the universe, Earth, the Moon and Mars must all remain clearly visible and recognisable against space.
+
+Restore the real planetary exploration experience first, improve the astronaut and simulation next, then refine the visual quality and educational immersion. Preserve all working code and never sacrifice actual functionality for decorative effects.
